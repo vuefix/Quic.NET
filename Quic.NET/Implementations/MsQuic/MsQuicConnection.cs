@@ -392,7 +392,7 @@ namespace System.Net.Quic.Implementations.MsQuic
 
         private static uint HandleEventPeerCertificateReceived(State state, ref ConnectionEvent connectionEvent)
         {
-            SslPolicyErrors sslPolicyErrors  = SslPolicyErrors.None;
+            SslPolicyErrors sslPolicyErrors = SslPolicyErrors.None;
             X509Chain? chain = null;
             X509Certificate2? certificate = null;
             X509Certificate2Collection? additionalCertificates = null;
@@ -649,7 +649,7 @@ namespace System.Net.Quic.Implementations.MsQuic
                 unsafe
                 {
                     Debug.Assert(!Monitor.IsEntered(_state));
-                    status = MsQuicApi.Api.SetParamDelegate(_state.Handle, QUIC_PARAM_LEVEL.CONNECTION, (uint)QUIC_PARAM_CONN.REMOTE_ADDRESS, (uint)sizeof(SOCKADDR_INET), (byte*)&address);
+                    status = MsQuicApi.Api.SetParamDelegate(_state.Handle, (uint)QUIC_PARAM_CONN.REMOTE_ADDRESS, (uint)sizeof(SOCKADDR_INET), (byte*)&address);
                     QuicExceptionHelpers.ThrowIfFailed(status, "Failed to connect to peer.");
                 }
 
@@ -672,7 +672,7 @@ namespace System.Net.Quic.Implementations.MsQuic
                     unsafe
                     {
                         Debug.Assert(!Monitor.IsEntered(_state));
-                        status = MsQuicApi.Api.SetParamDelegate(_state.Handle, QUIC_PARAM_LEVEL.CONNECTION, (uint)QUIC_PARAM_CONN.REMOTE_ADDRESS, (uint)sizeof(SOCKADDR_INET), (byte*)&quicAddress);
+                        status = MsQuicApi.Api.SetParamDelegate(_state.Handle, (uint)QUIC_PARAM_CONN.REMOTE_ADDRESS, (uint)sizeof(SOCKADDR_INET), (byte*)&quicAddress);
                         QuicExceptionHelpers.ThrowIfFailed(status, "Failed to connect to peer.");
                     }
                     targetHost = _state.TargetHost!;

@@ -69,7 +69,6 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         internal delegate uint SetParamDelegate(
             SafeHandle handle,
-            QUIC_PARAM_LEVEL level,
             uint param,
             uint bufferLength,
             byte* buffer);
@@ -77,7 +76,6 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         internal delegate uint GetParamDelegate(
             SafeHandle handle,
-            QUIC_PARAM_LEVEL level,
             uint param,
             ref uint bufferLength,
             byte* buffer);

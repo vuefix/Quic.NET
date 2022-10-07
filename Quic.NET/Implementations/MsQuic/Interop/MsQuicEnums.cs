@@ -132,37 +132,100 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
 
     internal enum QUIC_PARAM_LISTENER : uint
     {
-        LOCAL_ADDRESS = 0, // QUIC_ADDR
-        STATS = 1, // QUIC_LISTENER_STATISTICS
+        LOCAL_ADDRESS = 0x04000000, // QUIC_ADDR
+        STATS = 0x04000001, // QUIC_LISTENER_STATISTICS
     }
 
     internal enum QUIC_PARAM_CONN : uint
     {
-        QUIC_VERSION = 0, // uint32_t
-        LOCAL_ADDRESS = 1, // QUIC_ADDR
-        REMOTE_ADDRESS = 2, // QUIC_ADDR
-        IDEAL_PROCESSOR = 3, // uint16_t
-        SETTINGS = 4, // QUIC_SETTINGS
-        STATISTICS = 5, // QUIC_STATISTICS
-        STATISTICS_PLAT = 6, // QUIC_STATISTICS
-        SHARE_UDP_BINDING = 7, // uint8_t (BOOLEAN)
-        LOCAL_BIDI_STREAM_COUNT = 8, // uint16_t
-        LOCAL_UNIDI_STREAM_COUNT = 9, // uint16_t
-        MAX_STREAM_IDS = 10, // uint64_t[4]
-        CLOSE_REASON_PHRASE = 11, // char[]
-        STREAM_SCHEDULING_SCHEME = 12, // QUIC_STREAM_SCHEDULING_SCHEME
-        DATAGRAM_RECEIVE_ENABLED = 13, // uint8_t (BOOLEAN)
-        DATAGRAM_SEND_ENABLED = 14, // uint8_t (BOOLEAN)
-        DISABLE_1RTT_ENCRYPTION = 15, // uint8_t (BOOLEAN)
-        RESUMPTION_TICKET = 16, // uint8_t[]
-        PEER_CERTIFICATE_VALID = 17, // uint8_t (BOOLEAN)
+        // [NativeTypeName("#define QUIC_PARAM_CONN_QUIC_VERSION 0x05000000")]
+        QUIC_VERSION = 0x05000000,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_LOCAL_ADDRESS 0x05000001")]
+        LOCAL_ADDRESS = 0x05000001,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_REMOTE_ADDRESS 0x05000002")]
+        REMOTE_ADDRESS = 0x05000002,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_IDEAL_PROCESSOR 0x05000003")]
+        IDEAL_PROCESSOR = 0x05000003,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_SETTINGS 0x05000004")]
+        SETTINGS = 0x05000004,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_STATISTICS 0x05000005")]
+        STATISTICS = 0x05000005,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_STATISTICS_PLAT 0x05000006")]
+        STATISTICS_PLAT = 0x05000006,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_SHARE_UDP_BINDING 0x05000007")]
+        SHARE_UDP_BINDING = 0x05000007,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_LOCAL_BIDI_STREAM_COUNT 0x05000008")]
+        LOCAL_BIDI_STREAM_COUNT = 0x05000008,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_LOCAL_UNIDI_STREAM_COUNT 0x05000009")]
+        LOCAL_UNIDI_STREAM_COUNT = 0x05000009,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_MAX_STREAM_IDS 0x0500000A")]
+        MAX_STREAM_IDS = 0x0500000A,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_CLOSE_REASON_PHRASE 0x0500000B")]
+        CLOSE_REASON_PHRASE = 0x0500000B,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_STREAM_SCHEDULING_SCHEME 0x0500000C")]
+        STREAM_SCHEDULING_SCHEME = 0x0500000C,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_DATAGRAM_RECEIVE_ENABLED 0x0500000D")]
+        DATAGRAM_RECEIVE_ENABLED = 0x0500000D,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_DATAGRAM_SEND_ENABLED 0x0500000E")]
+        DATAGRAM_SEND_ENABLED = 0x0500000E,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_DISABLE_1RTT_ENCRYPTION 0x0500000F")]
+        DISABLE_1RTT_ENCRYPTION = 0x0500000F,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_RESUMPTION_TICKET 0x05000010")]
+        RESUMPTION_TICKET = 0x05000010,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_PEER_CERTIFICATE_VALID 0x05000011")]
+        PEER_CERTIFICATE_VALID = 0x05000011,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_LOCAL_INTERFACE 0x05000012")]
+        LOCAL_INTERFACE = 0x05000012,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_TLS_SECRETS 0x05000013")]
+        TLS_SECRETS = 0x05000013,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_VERSION_SETTINGS 0x05000014")]
+        VERSION_SETTINGS = 0x05000014,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_CIBIR_ID 0x05000015")]
+        CIBIR_ID = 0x05000015,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_STATISTICS_V2 0x05000016")]
+        STATISTICS_V2 = 0x05000016,
+
+        // [NativeTypeName("#define QUIC_PARAM_CONN_STATISTICS_V2_PLAT 0x05000017")]
+        STATISTICS_V2_PLAT = 0x05000017,
     }
 
     internal enum QUIC_PARAM_STREAM : uint
     {
-        ID = 0, // QUIC_UINT62
-        ZERRTT_LENGTH = 1, // uint64_t
-        IDEAL_SEND_BUFFER_SIZE = 2, // uint64_t - bytes
+        STREAM_ID = 0x08000000,
+
+        // [NativeTypeName("#define QUIC_PARAM_STREAM_0RTT_LENGTH 0x08000001")]
+        ZERRTT_LENGTH = 0x08000001,
+
+        // [NativeTypeName("#define QUIC_PARAM_STREAM_IDEAL_SEND_BUFFER_SIZE 0x08000002")]
+        IDEAL_SEND_BUFFER_SIZE = 0x08000002,
+
+        // [NativeTypeName("#define QUIC_PARAM_STREAM_PRIORITY 0x08000003")]
+        STREAM_PRIORITY = 0x08000003,
+
+        // [NativeTypeName("#define QUIC_PARAM_STREAM_STATISTICS 0X08000004")]
+        STREAM_STATISTICS = 0X08000004,
     }
 
     internal enum QUIC_LISTENER_EVENT : uint
@@ -185,8 +248,8 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
         DATAGRAM_STATE_CHANGED = 10,
         DATAGRAM_RECEIVED = 11,
         DATAGRAM_SEND_STATE_CHANGED = 12,
-        RESUMED = 13, // Server-only; provides resumption data, if any.
-        RESUMPTION_TICKET_RECEIVED = 14, // Client-only; provides ticket to persist, if any.
+        RESUMED = 13, // Server-only, provides resumption data, if any.
+        RESUMPTION_TICKET_RECEIVED = 14, // Client-only, provides ticket to persist, if any.
         PEER_CERTIFICATE_RECEIVED = 15, // Only with QUIC_CREDENTIAL_FLAG_INDICATE_CERTIFICATE_RECEIVED set.
     }
 

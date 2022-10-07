@@ -121,13 +121,13 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
 
         internal static bool IsQuicSupported { get; }
 
-        private const int MsQuicVersion = 1;
+        private const int MsQuicVersion = 2;
 
         static MsQuicApi()
         {
             var libName = "libmsquic.so";
 
-            if (OperatingSystem.IsWindows() )
+            if (OperatingSystem.IsWindows())
             {
                 if (!IsWindowsVersionSupported())
                 {
