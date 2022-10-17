@@ -1436,8 +1436,7 @@ namespace System.Net.Quic.Implementations.MsQuic
 
         private void ReceiveComplete(int bufferLength)
         {
-            uint status = MsQuicApi.Api.StreamReceiveCompleteDelegate(_state.Handle, (ulong)bufferLength);
-            QuicExceptionHelpers.ThrowIfFailed(status, "Could not complete receive call.");
+            MsQuicApi.Api.StreamReceiveCompleteDelegate(_state.Handle, (ulong)bufferLength);
         }
 
         // This can fail if the stream isn't started.

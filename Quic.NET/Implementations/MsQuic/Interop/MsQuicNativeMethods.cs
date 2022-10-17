@@ -656,7 +656,7 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
             IntPtr clientSendContext);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        internal delegate uint StreamReceiveCompleteDelegate(
+        internal delegate void StreamReceiveCompleteDelegate(
             SafeMsQuicStreamHandle stream,
             ulong bufferLength);
 
