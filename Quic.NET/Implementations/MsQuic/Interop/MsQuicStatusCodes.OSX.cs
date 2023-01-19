@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 #if OSX
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     internal static partial class MsQuicStatusCodes
     {

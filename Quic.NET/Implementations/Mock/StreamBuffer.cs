@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
 
-namespace System.Net.Quic.Implementations.Mock
+namespace Fujin.Net.Quic.Implementations.Mock
 {
     internal sealed class StreamBuffer : IDisposable
     {

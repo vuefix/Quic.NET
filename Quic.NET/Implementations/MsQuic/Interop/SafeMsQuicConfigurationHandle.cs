@@ -4,15 +4,16 @@
 using System.Buffers;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Quic;
 using System.Net.Security;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
-using static System.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using static Fujin.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
 
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     internal sealed class SafeMsQuicConfigurationHandle : SafeHandle
     {
@@ -185,8 +186,8 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
 
                 if (certificateContext != null)
                 {
-                    certificate = (X509Certificate2?) _contextCertificate.GetValue(certificateContext);
-                    intermediates = (X509Certificate2[]?) _contextChain.GetValue(certificateContext);
+                    certificate = (X509Certificate2?)_contextCertificate.GetValue(certificateContext);
+                    intermediates = (X509Certificate2[]?)_contextChain.GetValue(certificateContext);
 
                     if (certificate == null || intermediates == null)
                     {
@@ -211,7 +212,7 @@ namespace System.Net.Quic.Implementations.MsQuic.Internal
                         {
                             X509Certificate2Collection collection = new X509Certificate2Collection();
                             collection.Add(certificate);
-                            for (int i= 0; i < intermediates?.Length; i++)
+                            for (int i = 0; i < intermediates?.Length; i++)
                             {
                                 collection.Add(intermediates[i]);
                             }

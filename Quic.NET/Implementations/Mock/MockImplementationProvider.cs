@@ -3,7 +3,7 @@
 
 using System.Net.Security;
 
-namespace System.Net.Quic.Implementations.Mock
+namespace Fujin.Net.Quic.Implementations.Mock
 {
     internal sealed class MockImplementationProvider : QuicImplementationProvider
     {

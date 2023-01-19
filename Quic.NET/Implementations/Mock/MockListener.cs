@@ -3,11 +3,12 @@
 
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Net;
 using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace System.Net.Quic.Implementations.Mock
+namespace Fujin.Net.Quic.Implementations.Mock
 {
     internal sealed class MockListener : QuicListenerProvider
     {

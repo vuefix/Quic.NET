@@ -3,12 +3,12 @@
 
 using System.Buffers;
 using System.IO;
-using System.Net.Quic.Implementations;
+using Fujin.Net.Quic.Implementations;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace System.Net.Quic
+namespace Fujin.Net.Quic
 {
     public sealed class QuicStream : Stream
     {

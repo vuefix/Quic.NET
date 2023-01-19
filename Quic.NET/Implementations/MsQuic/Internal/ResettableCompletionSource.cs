@@ -4,7 +4,7 @@
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
 
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     /// <summary>
     /// A resettable completion source which can be completed multiple times.

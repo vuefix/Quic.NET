@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Net.Quic.Implementations.Mock
+namespace Fujin.Net.Quic.Implementations.Mock
 {
     // Warning: Mutable struct!
     // The purpose of this struct is to simplify buffer management in cases where the size of the buffer may grow large (e.g. >64K),

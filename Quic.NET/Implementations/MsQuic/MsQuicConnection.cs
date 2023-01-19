@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using System.Diagnostics;
-using System.Net.Quic.Implementations.MsQuic.Internal;
+using Fujin.Net.Quic.Implementations.MsQuic.Internal;
 using System.Net.Security;
 using System.Net.Sockets;
 using System.Runtime.ExceptionServices;
@@ -13,9 +13,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
-using static System.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using static Fujin.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using System.Net;
+using System.Net.Quic;
 
-namespace System.Net.Quic.Implementations.MsQuic
+namespace Fujin.Net.Quic.Implementations.MsQuic
 {
     internal sealed class MsQuicConnection : QuicConnectionProvider
     {

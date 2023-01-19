@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Net.Quic
+namespace Fujin.Net.Quic
 {
     /// <summary>
     /// Options for QUIC

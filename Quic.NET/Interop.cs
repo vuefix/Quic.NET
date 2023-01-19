@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Net.Quic
+namespace Fujin.Net.Quic
 {
     internal static partial class Interop
     {

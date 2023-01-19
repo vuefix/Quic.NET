@@ -5,7 +5,7 @@ using System.Buffers;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace System.Net.Quic.Implementations
+namespace Fujin.Net.Quic.Implementations
 {
     internal abstract class QuicStreamProvider : IDisposable, IAsyncDisposable
     {

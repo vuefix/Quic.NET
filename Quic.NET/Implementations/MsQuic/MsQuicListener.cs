@@ -5,16 +5,17 @@ using System.Buffers;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Diagnostics;
-using System.Net.Quic.Implementations.MsQuic.Internal;
+using Fujin.Net.Quic.Implementations.MsQuic.Internal;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Channels;
 using System.Threading.Tasks;
-using static System.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using static Fujin.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using System.Net;
 
-namespace System.Net.Quic.Implementations.MsQuic
+namespace Fujin.Net.Quic.Implementations.MsQuic
 {
     internal sealed class MsQuicListener : QuicListenerProvider, IDisposable
     {

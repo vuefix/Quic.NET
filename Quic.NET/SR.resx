@@ -142,7 +142,7 @@
     <value>Stream aborted by peer ({0}).</value>
   </data>
   <data name="SystemNetQuic_PlatformNotSupported" xml:space="preserve">
-    <value>System.Net.Quic is not supported on this platform.</value>
+    <value>Fujin.Net.Quic is not supported on this platform.</value>
   </data>
   <data name="net_quic_unsupported_address_family" xml:space="preserve">
     <value>Unsupported address family of '{0}' for remote endpoint.</value>
@@ -157,7 +157,7 @@
     <value>Connection timed out.</value>
   </data>
   <data name="net_quic_ssl_option" xml:space="preserve">
-    <value>'{0}' is not supported by System.Net.Quic.</value>
+    <value>'{0}' is not supported by Fujin.Net.Quic.</value>
   </data>
   <data name="net_quic_cert_custom_validation" xml:space="preserve">
     <value>The remote certificate was rejected by the provided RemoteCertificateValidationCallback.</value>

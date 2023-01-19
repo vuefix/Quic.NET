@@ -2,10 +2,11 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using System.Diagnostics.CodeAnalysis;
+using System.Net;
 using System.Runtime.InteropServices;
-using static System.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using static Fujin.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
 
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     internal unsafe sealed class MsQuicApi
     {

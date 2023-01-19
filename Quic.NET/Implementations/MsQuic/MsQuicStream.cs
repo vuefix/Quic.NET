@@ -4,14 +4,16 @@
 using System.Buffers;
 using System.Diagnostics;
 using System.IO;
-using System.Net.Quic.Implementations.MsQuic.Internal;
+using Fujin.Net.Quic.Implementations.MsQuic.Internal;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
-using static System.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using static Fujin.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using System.Net;
+using System.Net.Quic;
 
-namespace System.Net.Quic.Implementations.MsQuic
+namespace Fujin.Net.Quic.Implementations.MsQuic
 {
     internal sealed class MsQuicStream : QuicStreamProvider
     {

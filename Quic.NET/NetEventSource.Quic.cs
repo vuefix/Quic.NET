@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace System.Net
 {
-    [EventSource(Name = "Private.InternalDiagnostics.System.Net.Quic")]
+    [EventSource(Name = "Private.InternalDiagnostics.Fujin.Net.Quic")]
     internal sealed partial class NetEventSource : EventSource
     {
 #if !ES_BUILD_STANDALONE

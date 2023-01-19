@@ -5,9 +5,9 @@ using System.Buffers;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Security;
-using static System.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
+using static Fujin.Net.Quic.Implementations.MsQuic.Internal.MsQuicNativeMethods;
 
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     internal static class MsQuicAlpnHelper
     {

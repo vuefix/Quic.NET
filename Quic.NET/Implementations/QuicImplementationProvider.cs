@@ -3,7 +3,7 @@
 
 using System.Net.Security;
 
-namespace System.Net.Quic.Implementations
+namespace Fujin.Net.Quic.Implementations
 {
     public abstract class QuicImplementationProvider
     {

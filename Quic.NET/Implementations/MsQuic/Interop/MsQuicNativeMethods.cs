@@ -3,7 +3,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     /// <summary>
     /// Contains all native delegates and structs that are used with MsQuic.

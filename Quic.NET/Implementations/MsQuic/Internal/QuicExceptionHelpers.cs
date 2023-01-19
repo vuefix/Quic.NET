@@ -3,7 +3,7 @@
 
 using System.Net.Sockets;
 
-namespace System.Net.Quic.Implementations.MsQuic.Internal
+namespace Fujin.Net.Quic.Implementations.MsQuic.Internal
 {
     internal static class QuicExceptionHelpers
     {

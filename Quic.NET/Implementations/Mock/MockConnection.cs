@@ -10,8 +10,9 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Net;
 
-namespace System.Net.Quic.Implementations.Mock
+namespace Fujin.Net.Quic.Implementations.Mock
 {
     internal sealed class MockConnection : QuicConnectionProvider
     {
